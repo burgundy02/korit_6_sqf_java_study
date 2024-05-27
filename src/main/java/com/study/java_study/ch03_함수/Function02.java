@@ -14,9 +14,13 @@ public class Function02 {
         System.out.println("num2: " + num2);
     }
 
+    // 매개변수 o, 리턴 o
     String 빙수만들기(String 재료, int count) {
         return 재료 + "빙수" + count + "개";   //return 자료형이 String이라서
-
     }
 
+    // 매개변수 x, 리턴 o
+    String getData() {
+        return "데이터";
+    }
 }

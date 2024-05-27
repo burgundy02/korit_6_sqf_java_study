@@ -9,7 +9,7 @@ public class Function03 {
         System.out.println(phone);
         System.out.println();
     }
-    void fx02(Student student){
+    void fx02(Student student) {
         System.out.println(student.studentCode);
         System.out.println(student.name);
         System.out.println(student.age);

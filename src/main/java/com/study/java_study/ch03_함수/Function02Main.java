@@ -19,9 +19,10 @@ public class Function02Main {
         fx.fx02(100, 200);
         fx.빙수만들기("딸기", 10);
 
-        System.out.println(fx.빙수만들기("딸기", 10) + "주문 완료");
-        String 빙수 = fx.빙수만들기("초코", 5);
-        System.out.println(빙수);
+        System.out.println(fx.빙수만들기("딸기", 10) + "주문 완료");       // 리턴값 바로 출력하기
+
+        String 빙수 = fx.빙수만들기("초코", 5);                           // 리턴값 변수에 넣기
+        System.out.println(빙수);                                      // 변수 출력
 
 
 

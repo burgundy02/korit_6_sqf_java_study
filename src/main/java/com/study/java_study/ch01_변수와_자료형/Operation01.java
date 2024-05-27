@@ -3,6 +3,7 @@ package com.study.java_study.ch01_변수와_자료형;
 public class Operation01 {
     public static void main(String[] args) {
         // 연산자
+
         // 산술연산자
         int num1 = 10 + 20;
         int num2 = 9 / 2;
@@ -58,7 +59,7 @@ public class Operation01 {
 
         // 복합대입연산자
         int number = 10;
-        number += 5;
+        number += 5;        // 15
         number -= 1;
         number *= 2;
         number /= 2;
