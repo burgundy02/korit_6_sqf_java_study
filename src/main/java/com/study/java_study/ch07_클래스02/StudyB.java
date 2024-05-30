@@ -12,16 +12,17 @@ public class StudyB {
         this.age = age;
     }
 
-    public void setName(String name) {
+    public void setName(String name) {              // 외부클래스의 매개변수가 private 변수에 접근하려면 setter를 써야 한다.
         this.name = name;
     }
 
-    public String getName() {
+    public String getName() {                       // 외부클래스에서 private 변수를 호출하려면 getter를 써야한다.
         return name;
     }
 
-    public void show() {
+    public void show() {                            // 메서드 : b.show()하면 so가 출력된다.
         System.out.println(name);
         System.out.println(age);
+
     }
 }

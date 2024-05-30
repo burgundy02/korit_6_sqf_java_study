@@ -2,6 +2,36 @@ package com.study.java_study.ch01_변수와_자료형;
 
 public class Operation01 {
     public static void main(String[] args) {
+
+        /*
+
+        f5 = 파일, 폴더 복사
+
+        ctrl + o = 오버라이드 단축
+
+        ctrl + i = 오버라이트 인터페이스만 단축
+
+        shift + f6 = 클래스 이름 바꾸기
+
+        ctrl + Alt + l = 정렬 단축키
+
+        윈도우 + shift + s = 마우스로 드레그 범위설정 캡쳐
+
+        shift + alt + +,- = 글자 크기 조절
+
+        alt + insert = 생성자, getter, setter, to String
+
+         리팩토링 : 쓸 때없는 변수 만들지 말고 그냥 호출,리턴해라(코드 최대한 줄여라)
+         좋은 예 )
+
+         클린코드 : 읽기좋게 가독성있게
+
+            비지니스레이어를 service에 mvc가 지금 포함 돼 있음
+            그 안에 데이터를 추가하고 조회하고 하는 것들을 리포지토리에서 함
+            엔티티는 정보의 집합체
+         */
+
+
         // 연산자
 
         // 산술연산자
@@ -64,20 +94,6 @@ public class Operation01 {
         number *= 2;
         number /= 2;
         number %= 2;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     }
 }
