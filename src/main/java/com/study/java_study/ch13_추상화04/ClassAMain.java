@@ -8,7 +8,7 @@ public class ClassAMain {
         InterfaceA i2 = new InterfaceA2();
 
         a1.print(i1);
-        a1.print(i2);
+        a1.print(i2);   // 부품을 다르게
         a2.print(i1);
         a2.print(i2);
 

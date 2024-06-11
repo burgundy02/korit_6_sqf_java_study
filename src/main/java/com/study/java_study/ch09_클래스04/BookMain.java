@@ -9,5 +9,7 @@ public class BookMain {
         while(bookService.run()) {}          // run이 false가 될때까지 계속 반복 / while문은 돌 떄마다 메서드 호출
 
         System.out.println("프로그램을 종료합니다.");
+
+
     }
 }

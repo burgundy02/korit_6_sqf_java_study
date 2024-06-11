@@ -1,5 +1,6 @@
 package com.study.java_study.ch09_클래스04;
 
+import java.util.Arrays;
 import java.util.Scanner;                                 // isEmpty : 띄어쓰기도 문자로 포함할거면
 
 // isBlank : 띄어쓰기 포함 X -> 문자열 객체에만 쓸 수 있다.
@@ -14,13 +15,13 @@ public class BookService {
     }
 
     private String selectMenu() {
-        String menus = "1234q";
+        String[] menus = {"1", "2", "3", "4", "q"};
         String selectedMenu = null;
 
         while (true) {
             System.out.print("메뉴 선택: ");
-            selectedMenu = scanner.nextLine();
-            if (menus.contains(selectedMenu)) {
+            selectedMenu = scanner.nextLine();                          // menus라는 메뉴에서 binatySearch
+            if (Arrays.binarySearch(menus, selectedMenu) > -1) {         // -1 보다 크면 break;
                 break;
             }
             System.out.println("잘못된 입력입니다. 다시 입력하세요.");
@@ -35,8 +36,8 @@ public class BookService {
         System.out.println("[ 도서 관리 프로그램 ]");
         System.out.println("1. 도서 등록");
         System.out.println("2. 도서 검색");
-        System.out.println("3. 도서 수정"); //내일
-        System.out.println("4. 도서 삭제"); // 내일
+        System.out.println("3. 도서 수정");
+        System.out.println("4. 도서 삭제");
         System.out.println("q. 프로그램 종료");
 
         String selectedMenu = selectMenu();

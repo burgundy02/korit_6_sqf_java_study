@@ -1,5 +1,7 @@
 package com.study.java_study.ch09_클래스04;
 
+import java.util.Arrays;
+
 // 저장소 -> CRUD
 public class BookRepository {               // 도서 저장소
     // private String name; == 밑
@@ -16,14 +18,18 @@ public class BookRepository {               // 도서 저장소
     }
 
     private void extendBooks() {                // 이 배열의 확장은 이 클래스안에서만 쓰기때문에(외부에 호출 하지도 않고) private설정
-        // 기존 배열보다 크기가 하나 더 큰 배열을 생성한다.                 // saveBooks 할 때마다 방이 하나 더 많은 배열을 생성
-        BookEntity[] newBooks = new BookEntity[books.length + 1];
-        // 기존 배열의 정보를 새로운 배열로 모두 옮긴다. 이 때 마지막 인덱스의 값은 빈값이다.
-        for (int i = 0; i < books.length; i++) {
-            newBooks[i] = books[i];
-        }
-        // 기존의 배열의 주소가 들어있는 books 변수에 새로운 배열의 주소를 대입한다.
-        books = newBooks;               // books배열에 방이 하나 더 생김
+//        // 기존 배열보다 크기가 하나 더 큰 배열을 생성한다.                 // saveBooks 할 때마다 방이 하나 더 많은 배열을 생성
+//        BookEntity[] newBooks = new BookEntity[books.length + 1];
+//        // 기존 배열의 정보를 새로운 배열로 모두 옮긴다. 이 때 마지막 인덱스의 값은 빈값이다.
+//        for (int i = 0; i < books.length; i++) {
+//            newBooks[i] = books[i];
+//        }
+//
+//        books = newBooks;               // books배열에 방이 하나 더 생김
+
+
+            // 기존의 배열의 주소가 들어있는 books 변수에 새로운 배열의 주소를 대입한다.
+            books =Arrays.copyOf(books,books.length +1);
     }
 
     private int getLastIndex() {
@@ -166,18 +172,22 @@ public class BookRepository {               // 도서 저장소
         return findIndex;                          // 찾은 아이디를 리턴(찾은 아이디를 줘야하기 떄문에)
     }
 
-    public void deleteBookByBookId(int bookId){    // 방 하나 작은 배열을 새로만들고 삭제하는 작업
+    public void deleteBookByBookId(int bookId) {    // 방 하나 작은 배열을 새로만들고 삭제하는 작업
         int findIndex = indexOfBookId(bookId);
 
         BookEntity[] newBooks = new BookEntity[books.length - 1];
 
-        for(int i = 0; i < newBooks.length; i++) {
-            if(i < findIndex) {
+        for (int i = 0; i < newBooks.length; i++) {
+            if (i < findIndex) {
                 newBooks[i] = books[i];         // 삭제하고자 하는 인덱스보다 작으면 그냥 새배열에 옮기기
                 continue;
             }
             newBooks[i] = books[i + 1];         // 삭제하고자 하는 인덱스보다 같거나 크면 그 자리에 그 다음번호부터 넣어서 삭제하는 식
         }
         books = newBooks;                       // 주소 바꾸기
+
+
+//        우측에 쭉 뜨는 자료형으로 리턴해주겠다.
+
     }
 }
